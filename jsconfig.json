@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "Node",
+    "target": "ES2022",
+    "allowJs": true,
+    "checkJs": false
+  },
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+
+@plugin "daisyui/theme" {
+  name: "custom";
+  default: true;
+  prefersdark: true;
+  color-scheme: "dark";
+  --color-base-100: oklch(10.68% 0 0);
+  --color-base-200: oklch(12% 0 0);
+  --color-base-300: oklch(26.346% 0.018 262.177);
+  --color-base-content: oklch(90% 0.001 106.423);
+  --color-primary: oklch(90% 0.001 106.423);
+  --color-primary-content: oklch(17.226% 0.028 139.549);
+  --color-secondary: oklch(73.375% 0.165 35.353);
+  --color-secondary-content: oklch(14.675% 0.033 35.353);
+  --color-accent: oklch(86.34% 0.172 90.98);
+  --color-accent-content: oklch(14.845% 0.026 311.379);
+  --color-neutral: oklch(22% 0 0);
+  --color-neutral-content: oklch(60% 0 0);
+  --color-info: oklch(86.078% 0.142 206.182);
+  --color-info-content: oklch(17.215% 0.028 206.182);
+  --color-success: oklch(86.171% 0.142 166.534);
+  --color-success-content: oklch(17.234% 0.028 166.534);
+  --color-warning: oklch(86.163% 0.142 94.818);
+  --color-warning-content: oklch(17.232% 0.028 94.818);
+  --color-error: oklch(50.161% 0.1887 27.48);
+  --color-error-content: oklch(16.483% 0.019 33.756);
+  --radius-selector: 0.25rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+
+@layer base {
+  body {
+      font-family: 'Source Sans 3', sans-serif;
+  }
+}
+
+.font-oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: lightcoral;
+}
+
+::webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 10px;
+  border: 2px solid whitesmoke;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: darkred
+}
+
+
+
+@utility custom-shadow {
+  box-shadow: 0 0 15px var(--color-accent);
+}
+
+@utility custom-scrollbar {
+  scrollbar-color: oklch(90% 0.001 106.423 / 0.2) transparent;
+  scrollbar-width: thin;
+}
+
+@utility clip-path-custom {
+  clip-path: inset(0px 10px);
+}
+
+.animation1 {
+  animation: typing 0.6s ease-in-out infinite alternate;
+  animation-delay: -0.6s;
+}
+
+.animation2 {
+  animation: typing 0.6s ease-in-out infinite alternate;
+  animation-delay: -0.3s;
+}
+
+.animation3 {
+  animation: typing 0.6s ease-in-out infinite alternate;
+  animation-delay: 0s;
+}
+
+
+@keyframes typing {
+  75%, 100% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+
+.left-right {
+    transform-origin: 0% 50%;
+}
+
+
+
+
+  @theme {
+      --animate-progress: progress 1s infinite linear;/* Optional: Define an animation variable */
+
+
+
+      @keyframes progress {
+    0% {
+        transform:  translateX(0) scaleX(0);
+    }
+    40% {
+        transform:  translateX(0) scaleX(0.4);
+    }
+    100% {
+        transform:  translateX(100%) scaleX(0.8);
+    }
+}
+    }
+
