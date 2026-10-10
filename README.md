@@ -1,8 +1,7 @@
-# [CHATMAN]
+# CHATMAN
 
 A real-time chat application built with the MERN stack (MongoDB, Express, React, Node.js) and Redis. The focus of the project is on reliable message delivery: ordering, deduplication, and offline handling.
 
-![Screenshot](docs/screenshot.png)
 ![Chat screen](docs/chat.png)
 ![Login screen](docs/login.png)
 
